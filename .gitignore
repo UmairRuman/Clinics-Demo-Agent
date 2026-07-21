@@ -1,0 +1,5 @@
+.env
+__pycache__/
+*.pyc
+data/kb_embeddings.json
+data/appointments.json
