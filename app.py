@@ -132,6 +132,24 @@ st.markdown("""
         margin-bottom: 10px;
         padding: 4px 2px;
     }
+    /* Force readable text color inside chat bubbles regardless of the
+       viewer's light/dark browser theme, since the bubble background
+       itself is always forced to white above. */
+    div[data-testid="stChatMessage"] p,
+    div[data-testid="stChatMessage"] li,
+    div[data-testid="stChatMessage"] span,
+    div[data-testid="stChatMessage"] strong,
+    div[data-testid="stChatMessage"] em,
+    div[data-testid="stChatMessage"] h1,
+    div[data-testid="stChatMessage"] h2,
+    div[data-testid="stChatMessage"] h3,
+    div[data-testid="stChatMessage"] div[data-testid="stMarkdownContainer"] {
+        color: var(--ink) !important;
+    }
+    div[data-testid="stChatMessage"] .tool-event {
+        color: #1a7a48 !important;
+    }
+    div[data-testid="stChatMessage"] a { color: var(--teal) !important; }
     div[data-testid="stChatMessageAvatarUser"] {
         background: linear-gradient(135deg, #345a68, #1d3b46) !important;
     }
